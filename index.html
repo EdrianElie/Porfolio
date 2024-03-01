@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/815575c5a2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="image/logo2.png" alt="logo2">
+          <ul id="sidemenu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="features.html">PORTFOLIO</a></li>
+            <li><a href="contact.html">CONTACT ME</a></li>
+            <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Frontend Developer</p>
+          <h1>Hello, I'm <span>Edrian </span> Ferido<br> From Philippines</h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="/image/elie_pic.JPG" height="700px">
+          </div>
+          <div class="about-col-2">
+            <h1 class="pre">ABOUT ME</h1>
+            <p>Highly motivated and flexible to be able to handle multiple tasks.
+               Excellent team player and eager to learn new skills for improvement of my efficiency.
+                Skilled at creating web systems, monitoring the system security, and hardware maintenance.
+                 Willing to be trained in all fields of information technology and related courses. </p>
+                 <div class="tab-titles">
+                  <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                  <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                  <p class="tab-links" onclick="opentab('education')">Education</p>
+                 </div>
+                 <div class="tab-contents active-tab" id="skills">
+                  <ul>
+                    <li><span>Frontend</span><br>Creating Website/Designing Web</li>
+                    <li><span>Hardware</span><br>Troubleshooting Hardware Staff</li>
+                    <li><span>Software</span><br>Troubleshooting Sofware application</li>
+                  </ul>
+                 </div>
+                 <div class="tab-contents" id="experience">
+                  <ul>
+                    <li><span>2023-2024</span><br>IT Specialist at Brightcups Corporation</li>
+                    <li><span>2022-2023</span><br>Internship at Hino Toyota </li>
+                  </ul>
+                 </div>
+                 <div class="tab-contents" id="education">
+                  <ul>
+                    <li><span>2024</span><br>THE COMPLETE 2024 WEB DEVELOPMENT BOOTCAMP From Udemy</li>
+                    <li><span>2023</span><br>HTML, CSS, AND JAVASCRIPT FOR WEB DEVELOPERS From John Hopkins University</li>
+                    <li><span>2023</span><br>BSIT From Nueva Ecija University Science and Technology</li>
+                  </ul>
+                 </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        © 2024 Edrian Ferido
+      </p>
+     </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemen = document.getElementById("sidemenu");
+
+      function openmenu(){
+        sidemen.style.right = "0";
+      }
+      function closemenu(){
+        sidemen.style.right = "-200px";
+      }
+
+    </script>
+</body> 
+</html>

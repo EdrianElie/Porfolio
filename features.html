@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <link rel="stylesheet" href="features.css">
+    <script src="https://kit.fontawesome.com/815575c5a2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="image/logo2.png" alt="logo2">
+        <ul id="sidemenu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="features.html">PORTFOLIO</a></li>
+          <li><a href="contact.html">CONTACT ME</a></li>
+          <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+
+        <script>
+          var sidemen = document.getElementById("sidemenu");
+    
+          function openmenu(){
+            sidemen.style.right = "0";
+          }
+          function closemenu(){
+            sidemen.style.right = "-200px";
+          }
+    
+        </script>
+</body>
+</html>
